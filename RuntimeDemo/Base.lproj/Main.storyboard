@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RunTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCR-6g-goV">
+                                <rect key="frame" x="0.0" y="12" width="375" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOS-YW-E4R">
+                                <rect key="frame" x="0.0" y="139" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uVf-gl-PV6"/>
+                                </constraints>
+                                <state key="normal" title="Recevier动态添加resolveMethod"/>
+                                <connections>
+                                    <action selector="callResolveMethodBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYy-Ux-nJB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQs-3V-xOG">
+                                <rect key="frame" x="0.0" y="233" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vlc-9U-LWx"/>
+                                </constraints>
+                                <state key="normal" title="Recevier重定向让处理resolveMethod"/>
+                                <connections>
+                                    <action selector="callRedirectMethodBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6y-qY-NGo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyT-0s-rGu">
+                                <rect key="frame" x="0.0" y="328" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OZT-CS-M9g"/>
+                                </constraints>
+                                <state key="normal" title="Recevier把forwardMethod消息转发给mother"/>
+                                <connections>
+                                    <action selector="callRorwardMethodBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kT1-7R-kog"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AOS-YW-E4R" secondAttribute="bottom" constant="488" id="BZM-ev-tYE"/>
+                            <constraint firstItem="sQs-3V-xOG" firstAttribute="leading" secondItem="vyT-0s-rGu" secondAttribute="leading" id="Gps-jF-jKB"/>
+                            <constraint firstItem="sQs-3V-xOG" firstAttribute="trailing" secondItem="vyT-0s-rGu" secondAttribute="trailing" id="Sng-he-bXM"/>
+                            <constraint firstItem="GCR-6g-goV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ucl-aN-g5b"/>
+                            <constraint firstItem="GCR-6g-goV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="VPi-EL-mjM"/>
+                            <constraint firstItem="AOS-YW-E4R" firstAttribute="width" secondItem="GCR-6g-goV" secondAttribute="width" id="bKM-zJ-NrY"/>
+                            <constraint firstItem="AOS-YW-E4R" firstAttribute="top" secondItem="GCR-6g-goV" secondAttribute="bottom" constant="86" id="dQP-57-H1m"/>
+                            <constraint firstItem="sQs-3V-xOG" firstAttribute="leading" secondItem="AOS-YW-E4R" secondAttribute="leading" id="lqc-c2-pHJ"/>
+                            <constraint firstItem="sQs-3V-xOG" firstAttribute="top" secondItem="AOS-YW-E4R" secondAttribute="bottom" constant="54" id="oDz-dU-wyp"/>
+                            <constraint firstItem="AOS-YW-E4R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q4p-E9-Ybu"/>
+                            <constraint firstItem="sQs-3V-xOG" firstAttribute="trailing" secondItem="AOS-YW-E4R" secondAttribute="trailing" id="s9y-2y-6T2"/>
+                            <constraint firstItem="vyT-0s-rGu" firstAttribute="top" secondItem="sQs-3V-xOG" secondAttribute="bottom" constant="55" id="y5N-Sg-UB6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  StopMother.h
+//  StepMother.h
 //  RuntimeDemo
 //
 //  Created by wupei on 2017/6/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StopMother : NSObject
+@interface StepMother : NSObject
 
 - (void)kedouMotherRedirectMethod;///蝌蚪妈妈的名字 重定向方法
 

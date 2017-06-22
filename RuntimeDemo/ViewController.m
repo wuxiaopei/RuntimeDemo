@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Receiver.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (IBAction)callResolveMethodBtnClick:(id)sender {
+    
+    Receiver *receiver = [[Receiver alloc] init];
+    [receiver kedouMotherResolveMethod];
+   
+    NSLog(@"is receiver response to selector %@? %@", @"kedouMotherResolveMethod", [receiver respondsToSelector:@selector(kedouMotherResolveMethod)] ? @"YES" : @"NO");
+}
+
+- (IBAction)callRedirectMethodBtnClick:(id)sender {
+    Receiver *receiver = [[Receiver alloc] init];
+    [receiver kedouMotherRedirectMethod];
+
+    NSLog(@"is receiver response to selector %@? %@", @"kedouMotherRedirectMethod", [receiver respondsToSelector:@selector(kedouMotherRedirectMethod)] ? @"YES" : @"NO");
+}
+
+- (IBAction)callRorwardMethodBtnClick:(id)sender {
+    Receiver *receiver = [[Receiver alloc] init];
+    [receiver kedouMotherforwardMethod];
+    
+    NSLog(@"is receiver response to selector %@? %@", @"kedouMotherforwardMethod", [receiver respondsToSelector:@selector(kedouMotherforwardMethod)] ? @"YES" : @"NO");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

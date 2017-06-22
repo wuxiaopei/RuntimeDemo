@@ -15,6 +15,8 @@
 		2AA58BE61EFB70EA005CA856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA58BE41EFB70EA005CA856 /* LaunchScreen.storyboard */; };
 		2AA58BF11EFB70EA005CA856 /* RuntimeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA58BF01EFB70EA005CA856 /* RuntimeDemoTests.m */; };
 		2AA58BFC1EFB70EB005CA856 /* RuntimeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA58BFB1EFB70EB005CA856 /* RuntimeDemoUITests.m */; };
+		2AA58C0B1EFB73E5005CA856 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA58C0A1EFB73E5005CA856 /* Receiver.m */; };
+		2AA58C111EFBA343005CA856 /* StepMother.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA58C101EFBA343005CA856 /* StepMother.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		2AA58BF71EFB70EA005CA856 /* RuntimeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA58BFB1EFB70EB005CA856 /* RuntimeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoUITests.m; sourceTree = "<group>"; };
 		2AA58BFD1EFB70EB005CA856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA58C091EFB73E5005CA856 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
+		2AA58C0A1EFB73E5005CA856 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
+		2AA58C0F1EFBA343005CA856 /* StepMother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepMother.h; path = ../StepMother.h; sourceTree = "<group>"; };
+		2AA58C101EFBA343005CA856 /* StepMother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepMother.m; path = ../StepMother.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				2AA58BE41EFB70EA005CA856 /* LaunchScreen.storyboard */,
 				2AA58BE71EFB70EA005CA856 /* Info.plist */,
 				2AA58BD61EFB70EA005CA856 /* Supporting Files */,
+				2AA58C091EFB73E5005CA856 /* Receiver.h */,
+				2AA58C0A1EFB73E5005CA856 /* Receiver.m */,
+				2AA58C0F1EFBA343005CA856 /* StepMother.h */,
+				2AA58C101EFBA343005CA856 /* StepMother.m */,
 			);
 			path = RuntimeDemo;
 			sourceTree = "<group>";
@@ -276,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA58C111EFBA343005CA856 /* StepMother.m in Sources */,
 				2AA58BDE1EFB70EA005CA856 /* ViewController.m in Sources */,
 				2AA58BDB1EFB70EA005CA856 /* AppDelegate.m in Sources */,
+				2AA58C0B1EFB73E5005CA856 /* Receiver.m in Sources */,
 				2AA58BD81EFB70EA005CA856 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
